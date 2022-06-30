@@ -17,9 +17,9 @@ export class CountdownTimerComponent implements OnInit, OnChanges, OnDestroy {
   ngOnChanges(changes: SimpleChanges) {
     if ('seconds' in changes) {
       let v = changes['seconds'].currentValue;
-      v = typeof v === 'undefined' ? 60 : v;
+      v = typeof v === 'undefined' ? 11 : v;
       const vFixed = Number(v);
-      this.seconds = Number.isNaN(vFixed) ? 60 : vFixed;
+      this.seconds = Number.isNaN(vFixed) ? 11 : vFixed;
     }
   }
 
