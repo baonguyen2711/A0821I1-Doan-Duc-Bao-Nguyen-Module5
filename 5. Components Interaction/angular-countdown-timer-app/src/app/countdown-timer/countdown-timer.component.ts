@@ -9,7 +9,7 @@ export class CountdownTimerComponent implements OnInit, OnChanges, OnDestroy {
   message = '';
   remainingTime: number=0;
   @Input()
-  seconds = 11;
+  seconds = 15;
   @Output()
   finish = new EventEmitter<boolean>();
   private intervalId = 0;
@@ -17,9 +17,9 @@ export class CountdownTimerComponent implements OnInit, OnChanges, OnDestroy {
   ngOnChanges(changes: SimpleChanges) {
     if ('seconds' in changes) {
       let v = changes['seconds'].currentValue;
-      v = typeof v === 'undefined' ? 11 : v;
+      v = typeof v === 'undefined' ? 15 : v;
       const vFixed = Number(v);
-      this.seconds = Number.isNaN(vFixed) ? 11 : vFixed;
+      this.seconds = Number.isNaN(vFixed) ? 15 : vFixed;
     }
   }
 
@@ -44,7 +44,7 @@ export class CountdownTimerComponent implements OnInit, OnChanges, OnDestroy {
 
   stop() {
     this.clearTimer();
-    this.message = `Holding at T-${this.remainingTime} seconds`;
+    this.message = `Dừng lúc ${this.remainingTime} giây`;
   }
 
   reset() {
@@ -58,11 +58,11 @@ export class CountdownTimerComponent implements OnInit, OnChanges, OnDestroy {
     this.intervalId = window.setInterval(() => {
       this.remainingTime -= 1;
       if (this.remainingTime === 0) {
-        this.message = 'Blast off!';
+        this.message = 'Hết giờ!';
         this.clearTimer();
         this.finish.emit(true);
       } else {
-        this.message = `T-${this.remainingTime} seconds and counting`;
+        this.message = `Đếm ngược ${this.remainingTime} giây`;
       }
     }, 1000);
   }
