@@ -1,0 +1,27 @@
+<h1 class="text-center">Danh sách sản phẩm</h1>
+<button routerLink="/product/create" class="btn btn-success mt-4 mb-4"><i class="fas fa-plus-square"></i></button>
+<table class="table">
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">STT</th>
+    <th scope="col">Tên</th>
+    <th scope="col">Giá</th>
+    <th scope="col">Mô tả</th>
+    <th scope="col" class="text-center">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr scope="row" *ngFor="let product of products; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+    <td class="text-center">
+<!--      <a  [routerLink]="['/product/edit', product.id]"><span style="color: blue"><i class="fas fa-pen"></i></span></a>-->
+      <button class="btn btn-primary m-lg-2" [routerLink]="['/product/edit', product.id]"><i class="fas fa-pen"></i></button>
+      <button class="btn btn-danger m-lg-2" [routerLink]="['/product/delete', product.id]"><i class="fas fa-trash-alt"></i></button>
+      <button class="btn btn-info m-lg-2" [routerLink]="['/product/info', product.id]"><i class="fas fa-info-circle"></i></button>
+    </td>
+  </tr>
+  </tbody>
+</table>
