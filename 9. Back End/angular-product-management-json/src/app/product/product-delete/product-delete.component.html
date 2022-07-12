@@ -1,0 +1,32 @@
+
+<h1>Xoá sản phẩm</h1>
+<form [formGroup]="deleteForm" (ngSubmit)="deleteProduct()">
+  <table>
+    <tr>
+      <td>Mã sản phẩm:</td>
+      <td><input type="number" formControlName="id" readonly></td>
+    </tr>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text" formControlName="name" readonly></td>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><input type="number" formControlName="price" readonly></td>
+    </tr>
+    <tr>
+      <td>Danh mục</td>
+      <td><input type="text" formControlName="category" readonly></td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><input type="text" formControlName="description" readonly></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="btn btn-danger m-lg-2" onclick="return confirm('Are you sure you want to delete this Product?');">Xoá</button>
+      <button class="btn btn-secondary m-lg-2" routerLink="/product/list">Huỷ</button>
+      </td>
+    </tr>
+  </table>
+</form>

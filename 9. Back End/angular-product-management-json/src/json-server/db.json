@@ -1,0 +1,38 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Laptop"
+    },
+    {
+      "id": 2,
+      "name": "Telephone"
+    },
+    {
+      "id": 3,
+      "name": "Television"
+    }
+  ],
+  "products": [
+    {
+      "name": "Iphone 13",
+      "price": 2000,
+      "description": "New",
+      "category": {
+        "id": 2,
+        "name": "Telephone"
+      },
+      "id": 3
+    },
+    {
+      "name": "Dell",
+      "price": 1500,
+      "description": "99%",
+      "category": {
+        "id": 1,
+        "name": "Laptop"
+      },
+      "id": 4
+    }
+  ]
+}

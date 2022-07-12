@@ -1,0 +1,34 @@
+<h1>Edit sản phẩm</h1>
+<form [formGroup]="editForm" (ngSubmit)="updateProduct()">
+  <table>
+    <tr>
+      <td>Mã sản phẩm:</td>
+      <td><input type="number" formControlName="id" readonly></td>
+    </tr>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><input type="number" formControlName="price"></td>
+    </tr>
+    <tr>
+      <td>Danh mục</td>
+      <td>
+        <select formControlName="category" class="form-select">
+          <option  *ngFor="let category of categories" [ngValue]="category" >{{category.name}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="btn btn-primary m-lg-2" onclick="return confirm('Are you sure you want to edit this Product?');">Sửa</button>
+        <button class="btn btn-secondary m-lg-2" routerLink="/product/list">Huỷ</button></td>
+    </tr>
+  </table>
+</form>

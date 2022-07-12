@@ -1,0 +1,22 @@
+<h1>Cập nhật thông tin danh mục sản phẩm</h1>
+<form [formGroup]="editForm" (ngSubmit)="editCategory()">
+  <table>
+    <tr>
+      <td>Mã danh mục:</td>
+      <td><input type="number" formControlName="id" readonly></td>
+    </tr>
+    <tr>
+      <td>Tên danh mục:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button class="btn btn-primary m-lg-2"
+                onclick="return confirm('Are you sure you want to Edit this Category?');">Sửa
+        </button>
+        <button class="btn btn-secondary m-lg-2" routerLink="/category/list">Huỷ</button>
+      </td>
+    </tr>
+  </table>
+</form>

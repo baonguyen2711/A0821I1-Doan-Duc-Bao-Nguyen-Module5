@@ -28,7 +28,7 @@ export class ProductEditComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  save() {
+  edit() {
     this.productService.saveProduct(this.editForm.value);
     this.router.navigateByUrl('/product/list');
   }
