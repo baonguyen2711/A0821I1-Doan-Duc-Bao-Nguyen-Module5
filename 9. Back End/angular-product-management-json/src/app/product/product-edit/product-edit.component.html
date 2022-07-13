@@ -16,7 +16,7 @@
     <tr>
       <td>Danh mục</td>
       <td>
-        <select formControlName="category" class="form-select">
+        <select [compareWith]="compareProduct" formControlName="category" class="form-select" >
           <option  *ngFor="let category of categories" [ngValue]="category" >{{category.name}}</option>
         </select>
       </td>

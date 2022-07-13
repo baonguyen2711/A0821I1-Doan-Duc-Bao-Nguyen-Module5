@@ -23,9 +23,9 @@ export class ProductEditComponent implements OnInit {
         this.editForm = new FormGroup({
           id: new FormControl(product.id),
           name: new FormControl(product.name),
-          price : new FormControl(product.price),
-          description : new FormControl(product.description),
-          category : new FormControl(product.category.name),
+          price: new FormControl(product.price),
+          description: new FormControl(product.description),
+          category: new FormControl(product.category),
         });
         this.categoryService.getAll().subscribe(categories => this.categories = categories);
       })
@@ -34,6 +34,10 @@ export class ProductEditComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  compareProduct(p1: Product, p2: Product): boolean {
+    return p1.id === p2.id;
   }
 
   updateProduct() {

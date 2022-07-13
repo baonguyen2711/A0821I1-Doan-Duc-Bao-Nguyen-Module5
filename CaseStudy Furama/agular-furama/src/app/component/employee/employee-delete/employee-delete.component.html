@@ -1,0 +1,47 @@
+
+<h1>Xoá nhân viên</h1>
+<form [formGroup]="deleteForm" (ngSubmit)="deleteEmployee()">
+  <table>
+    <tr>
+      <td>Mã nhân viên:</td>
+      <td><input type="text" formControlName="id"></td>
+    </tr>
+    <tr>
+      <td>Tên nhân viên:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Ngày sinh</td>
+      <td><input type="date" formControlName="dateOfBirth"></td>
+    </tr>
+    <tr>
+      <td>Số CMND</td>
+      <td><input type="text" formControlName="identityCard"></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input type="text" formControlName="email"></td>
+    </tr>
+    <tr>
+      <td>Số ĐT</td>
+      <td><input type="text" formControlName="phone"></td>
+    </tr>
+    <tr>
+      <td>Trình độ</td>
+      <td><input type="text" formControlName="educationLevel"></td>
+    </tr>
+    <tr>
+      <td>Chức vụ</td>
+      <td><input type="text" formControlName="position"></td>
+    </tr>
+    <tr>
+      <td>Lương</td>
+      <td><input type="text" formControlName="salary"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="btn btn-danger m-lg-2" onclick="return confirm('Are you sure you want to Delete this Employee?');">Xoá</button>
+        <button class="btn btn-secondary m-lg-2" routerLink="/employee/list">Huỷ</button></td>
+    </tr>
+  </table>
+</form>

@@ -1,0 +1,112 @@
+{
+  "positions": [
+    {
+      "id": 1,
+      "name": "Lễ Tân"
+    },
+    {
+      "id": 2,
+      "name": "Phục Vụ"
+    },
+    {
+      "id": 3,
+      "name": "Chuyên Viên"
+    },
+    {
+      "id": 4,
+      "name": "Giám Sát"
+    },
+    {
+      "id": 5,
+      "name": "Quản Lý"
+    },
+    {
+      "id": 6,
+      "name": "Giám Đốc"
+    }
+  ],
+  "educationLevels": [
+    {
+      "id": 1,
+      "name": "Trung Cấp"
+    },
+    {
+      "id": 2,
+      "name": "Cao Đẳng"
+    },
+    {
+      "id": 3,
+      "name": "Đại Học"
+    }
+  ],
+  "employees": [
+    {
+      "name": "Ngoc",
+      "dateOfBirth": "2022-07-21",
+      "identityCard": "1122334455",
+      "phone": "0702770099",
+      "email": "ngoc@gmail.com",
+      "educationLevel": {
+        "id": 1,
+        "name": "Trung Cấp"
+      },
+      "position": {
+        "id": 1,
+        "name": "Lễ Tân"
+      },
+      "salary": "2000000",
+      "id": 2
+    },
+    {
+      "name": "Diệu",
+      "dateOfBirth": "2022-06-27",
+      "identityCard": "123123123",
+      "phone": "1231231233",
+      "email": "dieu@gmail.com",
+      "educationLevel": {
+        "id": 3,
+        "name": "Đại Học"
+      },
+      "position": {
+        "id": 5,
+        "name": "Quản Lý"
+      },
+      "salary": "2000000",
+      "id": 3
+    },
+    {
+      "name": null,
+      "dateOfBirth": null,
+      "identityCard": null,
+      "email": null,
+      "phone": null,
+      "educationLevel": {
+        "id": 1,
+        "name": "Trung Cấp"
+      },
+      "position": {
+        "id": 1,
+        "name": "Lễ Tân"
+      },
+      "salary": null,
+      "id": 4
+    },
+    {
+      "name": null,
+      "dateOfBirth": null,
+      "identityCard": null,
+      "email": null,
+      "phone": null,
+      "educationLevel": {
+        "id": 2,
+        "name": "Cao Đẳng"
+      },
+      "position": {
+        "id": 3,
+        "name": "Chuyên Viên"
+      },
+      "salary": null,
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+
+<h1>Tạo nhân viên mới</h1>
+<form [formGroup]="employeeForm" (ngSubmit)="saveEmployee()">
+  <table>
+    <tr>
+      <td>Tên nhân viên:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Ngày sinh</td>
+      <td><input type="date" formControlName="dateOfBirth"></td>
+    </tr>
+    <tr>
+      <td>Số CMND</td>
+      <td><input type="text" formControlName="identityCard"></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input type="text" formControlName="email"></td>
+    </tr>
+    <tr>
+      <td>Số ĐT</td>
+      <td><input type="text" formControlName="phone"></td>
+    </tr>
+    <tr>
+    <td>Trình độ</td>
+    <td>
+      <select formControlName="educationLevel" class="form-select">
+        <option *ngFor="let educationLevel of educationLevels" [ngValue]="educationLevel">{{educationLevel.name}}</option>
+      </select>
+    </td>
+    </tr>
+    <tr>
+    <td>Chức vụ</td>
+    <td>
+      <select formControlName="position" class="form-select">
+        <option *ngFor="let position of positions" [ngValue]="position">{{position.name}}</option>
+      </select>
+    </td>
+    </tr>
+    <tr>
+      <td>Lương</td>
+      <td><input type="text" formControlName="salary"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="btn btn-primary m-lg-2" onclick="return confirm('Are you sure you want to Create this Employee?');">Tạo mới</button>
+        <button class="btn btn-secondary m-lg-2" routerLink="/employee/list">Huỷ</button></td>
+    </tr>
+  </table>
+</form>
